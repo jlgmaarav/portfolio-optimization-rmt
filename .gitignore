@@ -94,12 +94,15 @@ Desktop.ini
 # Streamlit
 .streamlit/
 
-# Data files (usually too large for git)
+# Data files (exclude all CSV by default)
 *.csv
 *.xlsx
 *.xls
 data/
 historical_data/
+
+# BUT allow sample data file
+!data.csv
 
 # Generated reports
 *.pdf

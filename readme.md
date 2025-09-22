@@ -57,18 +57,39 @@ cd portfolio-optimization-rmt
 pip install -r requirements.txt
 ```
 
-### Download Market Data
+### Option 1: Use Sample Data (Recommended for Testing)
 ```bash
-python src/download_data.py
+# Sample data is already included in the repository
+streamlit run src/app.py
+# Upload data.csv when prompted in the Streamlit interface
+```
+
+### Option 2: Download Fresh Market Data
+```bash
+python src/download_data.py  # Downloads latest market data
+streamlit run src/app.py
 ```
 
 ### Launch Interactive Dashboard
-```bash
-streamlit run src/app.py
-```
 **Access at**: http://localhost:8501
 
-## 📈 Sample Results
+## Sample Data Included
+
+The repository includes `data.csv` (3.4 KB) with sample financial data for immediate testing:
+
+- **Ready to Use**: No need to download data initially
+- **Upload in Streamlit**: Use the file uploader in the web interface  
+- **Assets**: Multiple stocks, bonds, commodities, and sector ETFs
+- **Data Period**: Historical financial data for comprehensive analysis
+- **For Latest Data**: Run `python src/download_data.py` to get fresh market prices
+
+Using Sample Data
+1. Launch the app: `streamlit run src/app.py`
+2. In the sidebar, click "Browse files" under "Data Upload"
+3. Select `data.csv` from your project folder
+4. Start analyzing immediately! 
+
+## Sample Results
 
 ```
 Portfolio Performance Comparison
@@ -103,6 +124,7 @@ portfolio-optimization/
 │   └── download_data.py         # Market data fetching
 ├── tests/                       # Comprehensive test suite
 ├── docs/                        # Documentation and LaTeX templates  
+├── data.csv                     # Sample dataset for testing
 ├── requirements.txt             # Python dependencies
 └── README.md                    # Project documentation
 ```
